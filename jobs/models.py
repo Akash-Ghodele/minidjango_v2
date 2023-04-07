@@ -21,6 +21,7 @@ class Portal(models.Model):
 
     # TODO - refer
     # https://docs.djangoproject.com/en/4.1/ref/models/fields/#field-types
+    objects = None
     name = models.CharField(max_length=250, unique=True)
     description = models.CharField(max_length=250)
 
@@ -59,6 +60,7 @@ class JobDescription(models.Model):
 
     """
 
+    objects = None
     role = models.CharField(max_length=250, default="")
     description_text = models.CharField(max_length=250)
     pub_date = models.DateTimeField(default=timezone.now)
