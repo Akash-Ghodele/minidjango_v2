@@ -50,7 +50,7 @@ def job_titles(request):
         portal_name = portal_data.get("name")
         portal = Portal.objects.filter(name=portal_name)
 
-        if portal:
+        if not portal:
             portal = Portal.objects.create(**portal_data)
             portal.save()
         else:

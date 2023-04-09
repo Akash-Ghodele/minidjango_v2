@@ -12,7 +12,7 @@ GET HTTP request
 
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from jobs.models import Applicant, Portal
+from jobs.models import Applicant
 
 from django.urls import reverse_lazy
 
